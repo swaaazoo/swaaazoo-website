@@ -6,7 +6,13 @@ myWebsite.config(function($routeProvider) {
 		templateUrl: 'partials/home.html'
 	})
 	.when('/about', {
-		templateURL: 'partials/about.html'
+		templateUrl: 'partials/about.html'
 	})
+	.when('/portfolio', {
+		templateUrl: 'partials/portfolio.html'
+	})
+	.otherwise({
+		redirectTo: '/'
+	});
 
 });
