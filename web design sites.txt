@@ -1,0 +1,30 @@
+http://dzineblog.com/2011/08/32-clean-and-minimal-web-designs.html
+http://www.freecssshowcase.com/blogs/25-minimalistic-website-templates-for-inspiration/
+http://www.instantshift.com/2011/03/07/understanding-the-theory-of-minimalism-in-web-design/
+http://www.madebysofa.com/archive/
+http://bashooka.com/wordpress/freemium-minimalist-wordpress-themes-2013/
+http://webdesign.tutsplus.com/articles/create-a-minimal-portfolio-site-design-plus-a-free-psd--webdesign-619
+
+GO BACK TO:
+http://codingdojo.boomyeah.com/students/chapter/2662
+http://codingdojo.boomyeah.com/students/chapter/1783
+https://www.youtube.com/watch?v=BN0JlMZCtNU
+back to all the javascript commands
+inbetweening/tweening
+d3
+Tumult hype3
+
+
+
+1020x1020, 72px/inch
+
+shape study - coding windows
+
+
+in angular - view: you can pass the object from the ng-repeat into the function
+	for remove: button ng-click="removeTask(task)" when the repeat is from 'task in tasks'
+
+http://my.yrc.com/dynamic/national/servlet?CONTROLLER=com.rdwy.ec.rextracking.http.controller.ProcessPublicTrackingController&PRONumber=435966406X
+
+
+lunar pages

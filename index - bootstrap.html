@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Swaaazoo</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"/></script>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<!-- // <script src="javascripts/jquery.scalem.js"></script> -->
+	<script src="javascripts/jquery.scalem.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.left_bottom').scalem();
+			$('h1').scalem();
+		});
+	</script>
+    <style>
+      * {
+      	margin: 0 auto;
+      	padding: 0;
+      	border: 0;
+      	/*outline: 1px dotted red;*/
+      }
+      body {
+        font-family: 'Josefin Sans', sans-serif;
+      	font-size: 18px;
+      }
+      h1,h2,h3,h4,h5,h6,p {
+		line-height: 1.45;
+	  }
+	  h1 { 
+	  	font-size: 4em;
+	  }
+      .container {
+      	margin-top: 10%;
+      	height: 600px;
+      }
+      .bold {
+      	font-family: 'Josefin Sans', sans-serif;
+      	font-weight: 700;
+      }
+      .left {
+		font-family: 'Josefin Sans', sans-serif;
+        font-size: 48px;
+        min-height: 600px;
+      }
+      .right {
+		min-height: 600px;
+      }
+      .right_top {
+        font-size: 700%;
+        min-height: 500px;
+      }
+      .left_top {
+      	min-height: 200px;
+      }
+      .left_bottom {
+      	min-height: 300px;
+      }
+      .right_top, .left_bottom, .left_top {
+      	border-bottom: 5px solid black;
+      }
+      ul
+	  {
+	    list-style-type: none;
+	  }
+	  a {
+	  	color: black;
+	  }
+	  .media_links {
+	  	padding: 0px 20px;
+	  }
+	  .padding {
+	  	padding: 10px;
+	  }
+    </style>
+</head>
+<body>
+	
+<div class="container">
+	<div class="row main_row"> <!-- main row -->
+		<div class="col-sm-3 col-md-offset-1 left"> <!-- left column -->
+			<div class="padding">
+				<div class="row left_top text-center"><img src="dandelion.jpg" alt="dandelion image"></div> <!-- left_top column -->
+				<div class="row left_bottom" data-scale-ratio='1'>
+					<ul>
+						<li><a href="">portfolio</a></li>
+						<li><a href="">resume</a></li>
+						<li><a href="">about</a></li>
+						<li><a href="">contact</a></li>
+					</ul>
+				</div> <!-- left_bottom column -->
+			</div>
+		</div> <!-- left column -->
+		<div class="col-sm-8 right"> <!-- right column -->
+			<div class="padding">
+				<div class="row right_top"><h1 data-scale-ratio='1'>Welcome to my web development site! <span class="bold">kl</span></h1></div> <!-- right_top column -->
+				<div class="row right_bottom">
+					<a class="media_links" href="https://github.com/swaaazoo"><i class="fa fa-github fa-lg">&nbsp; GITHUB</i></a>
+					<a class="media_links" href="https://www.linkedin.com/in/krislewallen"><i class="fa fa-linkedin-square fa-lg">&nbsp; LINKEDIN</i></a>
+				</div><!-- right_bottom column -->
+			</div>
+		</div> <!-- right column -->
+		
+
+	</div> <!-- main row -->
+</div> <!-- END CONTAINER -->
+	
+</body>
+</html>
