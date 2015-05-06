@@ -37,8 +37,12 @@
 	      .left_bottom {
 	      	font-family: 'Josefin Sans', sans-serif;
         	font-size: 300%;
-	      	height: 255px;
+	      	height: 256px;
 	      	padding-top: 60px;
+	      }
+	      .shift {
+	      	height: 311px;
+	      	padding-top: 5px;
 	      }
       .right {
       	width: 740px;
@@ -80,6 +84,11 @@
 	  h2 {
 	  	padding-top: 60px;
 	  }
+	  h3 {
+	  	font-family: 'Josefin Sans', sans-serif;
+	  	font-weight: 400;
+	  	font-size: 250%;
+	  }
 	  h4 {
 	  	font-weight: 400;
 	  	font-size: 200%;
@@ -90,7 +99,8 @@
 	  	padding: 5px 0;
 	  }
 	  .skills li{
-		list-style: square inside;
+		list-style: square;
+		margin-left: 20px;
 	  }
 	  .accordion-content {
 	  	display: none;
@@ -99,4 +109,11 @@
  	  .sublist {
  	  	font-size: 50%;
  	  	padding-left: 25px;
+ 	  }
+ 	  .portfolio {
+ 	  	display: inline-block;
+ 	  	border: 1px solid #A9A9AA;
+ 	  	height: 300px;
+ 	  	width: 350px;
+ 	  	vertical-align: top;
  	  }

@@ -22,6 +22,10 @@
 		    	// toggle accordion content
 		    	accordionContent.slideToggle(250);
 		    });
+
+		    $('.accordion-toggle').click(function() {
+		    	$('div.left_bottom').toggleClass('shift');
+		    });
 		});
 	</script>
 
@@ -30,17 +34,19 @@
 	
 <div class="container">
 		<div class="left"> <!-- left column -->
-				<div class="row left_top"></div> <!-- left_top column -->
-				<div class="row left_bottom">
+				<div class="left_top"></div> <!-- left_top column -->
+				<div class="left_bottom">
 					<ul>
 						<li><a href="#/home">home</a></li>
 						<li><a href="#/about">about</a></li>
 						<li><a href="#" class="accordion-toggle">portfolio</a>
 						<div class="accordion-content">
 							<ul class="sublist">
-								<li><a href="#/portfolio">javascript</a></li>
-								<li><a href="#">php</a></li>
-								<li><a href="#">ruby</a></li>
+								<li><a href="#/frontend">html/css/jquery</a></li>
+								<li><a href="#/javascript">javascript</a></li>
+								<li><a href="#/php">php</a></li>
+								<li><a href="#/ruby">ruby</a></li>
+								<li><a href="#/mean">mean</a></li>
 							</ul>
 						</div>
 						</li>

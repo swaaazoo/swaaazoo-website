@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>Javascript Demo - Bubbles</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+	body {
+		background-color:black;
+	}
+		.back {
+		font-family: 'Josefin Sans', sans-serif;
+        font-size: 1em;
+        padding-left: 20px;
+        background-color:black;
+        color: white;
+	}
+	</style>
+</head>
+<body>
+	<div class="back"><a href="/#/javascript"><h2>Back</h2></a></div>
+	<div>
+		<svg id="svg" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%"></svg>
+
+		<script>
+
+		//because we haven't learned how to do OOP in Javascript, we're going to just use regular functions.  Know that with OOP, there is even a better way to do this
+		var counter = 1;
+		var circles = {};
+
+		//create an SVG element
+		function makeSVG(tag, attrs) {
+	        var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
+	        for (var k in attrs)
+	        {
+	            el.setAttribute(k, attrs[k]);
+	        }
+	        return el;
+	    }
+
+		function createCircle(cx,cy,r)
+		{
+			var circle = makeSVG('circle', 
+				{ cx: cx,
+				  cy: cy,
+				  r:  r,
+				  id: 'circle_'+counter,
+				  style: "fill: white"
+				});
+
+			//the key will be the HTML id and the value will be the radius
+			circles['circle_'+counter] = { radius: r };
+
+			counter++;
+			document.getElementById('svg').appendChild(circle);
+		}
+
+		//go through all the circles and update its radius and background color
+		function updateCircles()
+		{
+			for(circle in circles)
+			{
+				var rand = Math.floor((Math.random()*255)+1);
+				var rand2 = Math.floor((Math.random()*255)+1);
+				var rand3 = Math.floor((Math.random()*255)+1);
+
+				var el = document.getElementById(circle);
+				var color = rand-parseInt(circles[circle].radius/80*255);
+				var color2 = rand2-parseInt(circles[circle].radius/80*255);
+				var color3 = rand3-parseInt(circles[circle].radius/80*255);
+				circles[circle].radius = circles[circle].radius+1;
+
+				//update the radius and the background color
+				el.setAttribute("r", circles[circle].radius);
+				el.setAttribute("style", "fill: rgb("+color+","+color2+","+color3+"); opacity: .5;");
+
+				//if the circle radius is greater than 80, remove the dom and remove its value in the circles variable/object
+				if(circles[circle].radius > 80)
+				{
+					document.getElementById('svg').removeChild(el);
+					delete circles[circle];
+				}
+			}
+		}
+
+		//main loop
+		function mainLoop()
+	    {
+	    	//create a new circle of radius 15 every time the loop is run
+	    	createCircle(Math.random()*document.body.clientWidth, Math.random()*document.body.clientHeight, 15);
+	    	
+	    	//update the circle size and background color
+	    	updateCircles();	
+	    }
+		
+		//execute the mainLoop funtion every 30 milliseconds
+		setInterval(mainLoop, 30);
+
+		//Create a circle on click
+		$('body').click(function(e)
+		{
+			createCircle(e.clientX, e.clientY, 15);
+		})
+
+		//trailing circles from mouse pointer
+		$('body').mousemove(function(e)
+		{
+			var rand = -Math.floor((Math.random()*50)+1);
+			var rand2 = -Math.floor((Math.random()*50)+1);
+			createCircle((e.clientX + rand), (e.clientY+rand2), 1);
+		})
+
+		</script>
+	</div>
+</body>
+</html>
