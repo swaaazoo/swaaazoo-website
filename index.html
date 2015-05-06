@@ -4,12 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Swaaazoo</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="javascripts/angular.min.js"></script>
 	<script src="javascripts/angular-route.min.js"></script>
 	<script src="javascripts/app.js"></script>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300400,700' rel='stylesheet' type='text/css'>  
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700' rel='stylesheet' type='text/css'>  
 	<link rel="stylesheet" href="stylesheets/style.css">
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+		    $('.accordion-toggle').on('click', function(event){
+		    	event.preventDefault();
+		    	// create accordion variables
+		    	var accordion = $(this);
+		    	var accordionContent = accordion.next('.accordion-content');
+		    	// toggle accordion content
+		    	accordionContent.slideToggle(250);
+		    });
+		});
+	</script>
+
 </head>
 <body>
 	
@@ -20,7 +35,15 @@
 					<ul>
 						<li><a href="#/home">home</a></li>
 						<li><a href="#/about">about</a></li>
-						<li><a href="#/portfolio">portfolio</a></li>
+						<li><a href="#" class="accordion-toggle">portfolio</a>
+						<div class="accordion-content">
+							<ul class="sublist">
+								<li><a href="#/portfolio">javascript</a></li>
+								<li><a href="#">php</a></li>
+								<li><a href="#">ruby</a></li>
+							</ul>
+						</div>
+						</li>
 					</ul>
 				</div> <!-- left_bottom column -->
 		</div> <!-- left column -->

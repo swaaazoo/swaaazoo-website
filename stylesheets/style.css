@@ -21,8 +21,8 @@
       	text-align: right;
       }
       .left {
-		font-family: 'Josefin Sans', sans-serif;
-        font-size: 300%;
+		/*font-family: 'Josefin Sans', sans-serif;
+        font-size: 300%;*/
         width: 200px;
         height: 650px;
         display: inline-block;
@@ -35,6 +35,8 @@
 	      	background-repeat: no-repeat;
 	      }
 	      .left_bottom {
+	      	font-family: 'Josefin Sans', sans-serif;
+        	font-size: 300%;
 	      	height: 255px;
 	      	padding-top: 60px;
 	      }
@@ -46,8 +48,6 @@
 		padding-left: 12px;
       }
 	      .right_top {
-	        /*font-size: 72px;*/
-	        /*font-size: 350%;*/ 
 	        height: 565px;
 	        padding-top: 50px;
 	      }
@@ -62,10 +62,9 @@
       .right_top, .left_bottom, .left_top {
       	border-bottom: 5px solid black;
       }
-      ul
-	  {
-	    list-style-type: none;
-	  }
+   	  ul li {
+ 	  	list-style-type: none;
+ 	  }
 	  a {
 	  	color: black;
 	  	text-decoration: none;
@@ -85,3 +84,19 @@
 	  	font-weight: 400;
 	  	font-size: 200%;
 	  }
+	  h5 {
+	  	font-weight: 400;
+	  	font-size: 150%;
+	  	padding: 5px 0;
+	  }
+	  .skills li{
+		list-style: square inside;
+	  }
+	  .accordion-content {
+	  	display: none;
+	  	overflow: auto;
+	  }
+ 	  .sublist {
+ 	  	font-size: 50%;
+ 	  	padding-left: 25px;
+ 	  }
