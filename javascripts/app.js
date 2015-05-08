@@ -11,9 +11,6 @@ myWebsite.config(function($routeProvider) {
 	.when('/javascript', {
 		templateUrl: 'partials/javascript.html'
 	})
-	.when('/balls', {
-		templateUrl: 'partials/colliding_balls.html'
-	})
 	.when('/frontend', {
 		templateUrl: 'partials/frontend.html'
 	})
